@@ -25,3 +25,24 @@ def pick():
                 if guess <number:
                     print("The number is too low")
                 if guess!==number
+                    time.sleep(.5)
+                    print("Try again!")
+                if guess==number:
+                    break
+            if guess>100 or guess<1:
+                print("Silly goose!The number is out of range")
+                time.sleep(.25)
+                print("Please enter a number between 1 and 100")
+        except:
+            print("I don`t think that"+enter+"is a number.Sorry!")
+    if guess == number:
+        guesses= str(guesses)
+        print("Good job {} you gusses my number in {} guesses!".format(name,guesses))
+    if guess != number:
+        print("Nope!The number I was thinking is" + str(number))
+playagain="yes"
+while playagain=="yes" or playagain=="Yes" or playagain="y":
+intro()
+pick()
+print("Do you want play again")
+playagain=input()
